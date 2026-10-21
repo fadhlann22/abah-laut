@@ -1,0 +1,39 @@
+========================================
+INSTALASI ABAH LAUT (XAMPP Windows)
+========================================
+
+1. Buat folder kosong:
+   C:\xampp\htdocs\abah-laut
+
+2. Extract SEMUA isi file ZIP ini LANGSUNG ke dalam folder tersebut.
+   Setelah extract, struktur harus seperti ini:
+   C:\xampp\htdocs\abah-laut\index.php
+   C:\xampp\htdocs\abah-laut\login.php
+   C:\xampp\htdocs\abah-laut\includes\auth.php
+   C:\xampp\htdocs\abah-laut\config\database.php
+   C:\xampp\htdocs\abah-laut\database\db_alan.sql
+   C:\xampp\htdocs\abah-laut\uploads\menus\...
+
+   JANGAN extract sehingga menjadi:
+   C:\xampp\htdocs\abah-laut\abah-laut\index.php   <-- SALAH (folder bersarang)
+
+3. Start Apache + MySQL di XAMPP Control Panel.
+
+4. Buka phpMyAdmin: http://localhost/phpmyadmin
+   - Buat database baru: db_alan
+   - Pilih database db_alan → tab Import
+   - Pilih file: C:\xampp\htdocs\abah-laut\database\db_alan.sql
+   - Klik Go
+
+5. Buka website: http://localhost/abah-laut/
+
+6. Login dengan akun demo (lihat README.md)
+
+7. Hapus atau rename file install.php setelah selesai.
+
+Jika muncul error "Failed to open stream: includes/auth.php":
+→ Folder includes tidak ada di lokasi yang benar.
+→ Pastikan Anda extract isi ZIP langsung ke C:\xampp\htdocs\abah-laut
+→ Pastikan file C:\xampp\htdocs\abah-laut\includes\auth.php benar-benar ada.
+
+========================================
